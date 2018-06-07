@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/WORK/CLionWorkSpace/algorithm/array_algori.h
+
+D:/WORK/CLionWorkSpace/algorithm/dynamic_planning.h
+cstdio
+-
+queue
+-
+map
+-
+
+D:/WORK/CLionWorkSpace/algorithm/main.cpp
+iostream
+-
+dynamic_planning.h
+D:/WORK/CLionWorkSpace/algorithm/dynamic_planning.h
+array_algori.h
+D:/WORK/CLionWorkSpace/algorithm/array_algori.h
+stack_algori.h
+D:/WORK/CLionWorkSpace/algorithm/stack_algori.h
+recursvie.h
+D:/WORK/CLionWorkSpace/algorithm/recursvie.h
+other.h
+D:/WORK/CLionWorkSpace/algorithm/other.h
+
+D:/WORK/CLionWorkSpace/algorithm/other.h
+
+D:/WORK/CLionWorkSpace/algorithm/recursvie.h
+string
+-
+
+D:/WORK/CLionWorkSpace/algorithm/stack_algori.h
+stack
+-
+
