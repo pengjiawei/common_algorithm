@@ -2,6 +2,8 @@
 // Created by pengjiawei on 2018/5/8.
 //
 #include <list>
+#include <set>
+
 #ifndef ALGORITHM_ALGORI_H
 #define ALGORITHM_ALGORI_H
 //判断某个数是否为平方数，二分法，时间复杂度为log(n)，如果用平方的方式来判断，时间复杂度比二分法要高，为√2
@@ -155,10 +157,21 @@ void left_reverse_string(std::string& s,int n){
     reverse_string(s,0,s.size() - 1 );
 }
 
-void reverse_print_list(const std::list<int>& L){
-    
-
-
+//最小的k个数，输入一个数组和一个数k，找出数组中最小的k个数
+//第一种解法，直接排序，然后打印前k个数字，复杂度为O(n)
+//这里写第二种解法，建立一个长度为k的排序集合类(类似Set等)，在k不满时，直接放入原数组中的值。如果k数组满了，则比较原数组中的值与k中最大值，如果小于，则替换
+void minimal_k(int* arr,int arr_size,int k,std::set<int>& ret_set){
+    for (int i = 0; i < arr_size; ++i) {
+        if(ret_set.size() < k){
+            ret_set.insert(arr[i]);
+        }else{
+            auto iter = --ret_set.end();
+            if(arr[i] < *iter){
+                ret_set.erase(--ret_set.end());
+                ret_set.insert(arr[i]);
+            }
+        }
+    }
 }
 
 #endif //ALGORITHM_ALGORI_H

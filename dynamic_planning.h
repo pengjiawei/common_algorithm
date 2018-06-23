@@ -49,9 +49,10 @@ void increment_array(int* array,int size){
         my_queue.push(array[i + 1]);
         ++i;
     }
-    printf("result\n");
+    printf("increment result\n");
     for (int j = subsequence_index - subsequence_size + 1; j <= subsequence_index; ++j) {
         printf("%d,",array[j]);
     }
+    printf("\n");
 }
 #endif //ALGORITHM_DYNAMIC_PLANNING_H

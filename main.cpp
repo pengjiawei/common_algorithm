@@ -68,5 +68,13 @@ int main() {
     std::string str = "abcdefg";
     left_reverse_string(str,1);
     printf("str = %s\n",str.c_str());
+
+    printf("minimal k\n");
+    int arr_k[] = {1,6,3,8,5,0,9};
+    std::set<int> set;
+    minimal_k(arr_k,7,3,set);
+    for (auto &&item : set) {
+        printf("%d,",item);
+    }
     return 0;
 }
